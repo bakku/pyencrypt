@@ -1,0 +1,7 @@
+#!/usr/bin/env python
+
+import hashlib
+
+digest = hashlib.sha512(b'Hi').hexdigest()
+
+print(digest)
