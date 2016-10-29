@@ -12,13 +12,12 @@ class PyencryptCLI:
 
         self.encrypt = self.arguments[1] == '-e'
         self.in_file = self.arguments[2]
-        self.out_file = self.arguments[3]
     
     def correct_usage(self):
        return self.enough_arguments() and self.correct_option() and self.input_file_exists() 
 
     def enough_arguments(self):
-       return len(self.arguments) == 4
+       return len(self.arguments) == 3
 
     def correct_option(self):
         return self.arguments[1] == '-e' or self.arguments[1] == '-d'
@@ -29,11 +28,11 @@ class PyencryptCLI:
     def print_usage(self):
         usage = """
         Usage:
-            pyencryt OPTION IN_FILE OUT_FILE
+            pyencryt OPTION IN_FILE
 
             Options:
-                -d      Decrypt the IN_FILE into the OUT_FILE
-                -e      Encrypt the IN_FILE into the OUT_FILE 
+                -d      Decrypt the IN_FILE
+                -e      Encrypt the IN_FILE 
         """
         
         print(dedent(usage))

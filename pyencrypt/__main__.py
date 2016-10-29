@@ -10,7 +10,7 @@ cli = PyencryptCLI(sys.argv)
 cli.parse()
 
 if cli.encrypt:
-    encryptor = Encryptor(cli.in_file, cli.out_file)
+    encryptor = Encryptor(cli.in_file)
     encryptor.encrypt()
 else:
     print("hi")
