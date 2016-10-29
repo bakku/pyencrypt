@@ -34,5 +34,4 @@ class Encryptor:
 
     def write_encrypted_text_to_file(self):
         output_file = open(self.in_file_name + '.pec', 'wb')
-
         output_file.write(self.encrypted_text)
