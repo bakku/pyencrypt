@@ -11,12 +11,18 @@ with open('LICENSE') as f:
 
 setup(
     name='pyencrypt',
-    version='0.0.1',
+    version='0.0.4',
     description='Simple file encryptor using python',
     long_description=readme,
     author='Christian Paling',
     author_email='christian.paling@googlemail.com',
     url='https://github.com/bakku/pyencrypt',
     license=license,
-    packages=find_packages()
+    packages=['pyencrypt'],
+    install_requires=['pycrypto'],
+    entry_points={
+        'console_scripts': [
+            'pyencrypt = pyencrypt.__main__:main'
+        ]
+    }
 )
